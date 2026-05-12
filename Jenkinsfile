@@ -10,7 +10,8 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/adityavaste/glow-pure-powder.git'
+                git branch: 'main',
+                url: 'https://github.com/adityavaste/glow-pure-powder.git'
             }
         }
 
@@ -39,7 +40,6 @@ pipeline {
                 '''
             }
         }
-
     }
 
     post {
@@ -52,5 +52,3 @@ pipeline {
         }
     }
 }
-
-//hi
